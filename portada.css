@@ -1,0 +1,167 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 0.5fr 3fr;
+  grid-template-areas:
+   "header header header"
+   "sidebar content content"
+   "footer footer footer"
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+
+  .sidebar {
+    display: none; /* Ocultar la barra lateral */
+  }
+}
+
+/* HEADER */
+.header {
+  grid-area: header;
+  background-color: rgb(100, 139, 64);
+  color: rgb(255, 255, 255);
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.616); 
+  max-height: 20vw;
+  overflow:  hidden;
+  line-height: 0.4;
+  
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content img {
+  margin-right: 30px;
+  width: 20vw;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
+}
+
+.header-text {
+  text-align: left;
+  
+}
+
+/* Menu */
+header nav {
+  text-align: center; /* Centrar los enlaces */
+  margin-top: -20px;
+}
+
+header nav a {
+  display: inline-block; /* Convertir los enlaces en elementos de bloque en línea */
+  padding: 10px; /* Añadir espacio alrededor del texto */
+  margin: 0 10px; /* Añadir espacio entre los enlaces */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Eliminar el subrayado del texto */
+  border-radius: 5px; /* Añadir esquinas redondeadas */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
+  
+}
+
+header nav a:hover {
+  background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #eeeeeec4;
+  margin-top: 10px;
+  margin-left: 15px;
+  grid-area: sidebar;
+  border-radius: 5px;
+}
+
+.sidebar ul {
+  list-style-type: none; 
+  padding: 10px; 
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* Separación entre elementos*/
+}
+
+.sidebar a {
+  display: block; 
+  padding: 8px; /* Espacio alrededor del texto del enlace */
+  color: white;
+  text-decoration: none; /* Eliminar el subrayado del texto */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
+  border-radius: 5px; /* Añadir esquinas redondeadas */
+}
+
+.sidebar a:hover {
+  background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
+}
+
+/* Contenido Principal */
+main {
+  padding: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+  "actividad actividad actividad";
+  grid-gap: 25px; /* Espacio entre las actividades */
+}
+
+.actividad {
+  border-radius: 10px; /* Esquinas redondeadas */
+  text-align: center;
+  text-decoration: none; /* Eliminar el subrayado del texto */
+  color: #333;
+  background-color: #eeeeeec4; /* Color de fondo grisaceo */
+  transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.actividad:hover {
+  transform: scale(1.07); /* Agrandar la actividad al pasar el mouse */
+}
+
+.actividad img {
+  border-top-left-radius: 10px; /* Esquinas redondeadas */
+  border-top-right-radius: 10px; /* Esquinas redondeadas */
+  width: 100%; /* La imagen se ajusta al ancho del contenedor */
+  height: 17ch; 
+}
+
+.actividad h3 {
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info strong {
+  font-weight: bold;
+}
