@@ -141,7 +141,7 @@ main {
   border-top-left-radius: 10px; /* Esquinas redondeadas */
   border-top-right-radius: 10px; /* Esquinas redondeadas */
   width: 100%; /* La imagen se ajusta al ancho del contenedor */
-  height: 17ch; 
+  height: 80%; 
 }
 
 .actividad h3 {
