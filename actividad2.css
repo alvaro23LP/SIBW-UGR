@@ -21,10 +21,17 @@ body {
       "footer";
   }
 
+  header .contenido{
+    font-size: 12px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav a {
+    font-size: 15px; /* Tamaño mínimo de fuente */
+  }
+
   .sidebar li {
     text-align: center;
   }
-
 }
 
 /* HEADER */
@@ -34,12 +41,12 @@ header {
   color: rgb(255, 255, 255);
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: 2vw;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.616); 
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.863); 
   max-height: 20vw;
   overflow:  hidden;
-  line-height: 0.4;
+  line-height: 0.4; /* Para ajustar la separacion entre el texto */
 }
 
 header .contenido {
@@ -72,13 +79,11 @@ header nav a {
   text-decoration: none; /* Eliminar el subrayado del texto */
   border-radius: 5px; /* Añadir esquinas redondeadas */
   background-color: rgb(100, 139, 64); /* Color de fondo */
-  
 }
 
 header nav a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
-
 
 /* SIDEBAR */
 .sidebar {
@@ -87,15 +92,12 @@ header nav a:hover {
   margin-left: 15px;
   grid-area: sidebar;
   border-radius: 5px;
-}
-
-.sidebar ul {
   list-style-type: none; 
   padding: 10px; 
 }
 
 .sidebar li {
-  margin-bottom: 10px; /* Separación entre elementos*/
+  margin-bottom: 10px; /* Separación del tope y entre elementos */
 }
 
 .sidebar a {
@@ -111,9 +113,7 @@ header nav a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
 
-
 /* Contenido Principal */
-
 .content {
   background-color: #eeeeeec4;
   border-radius: 5px;
