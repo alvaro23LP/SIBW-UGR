@@ -4,21 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#425c29">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Madimi+One&display=swap" rel="stylesheet">
     
     <title>GranaXplora</title>
     
-    <link rel="icon" type="image/jpg" href="images/icono.PNG">
+    <link rel="icon" type="image/jpg" href="images/icono.png">
     <link rel="stylesheet" href="actividad2.css" media="screen" type="text/css">
     <link rel="stylesheet" href="actividad_imprimir.css" media="print"  type="text/css"> <!-- CSS para impresión -->
-
   </head>
   
   <body>
-    <header class="header"> <!-- MODIFICAR FUENTE -->
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <header class="header"> 
       <div class="contenido">
         <a href="portada.html"> 
-          <img alt="imagen de portada" title="icono de GranaXplora" src="images/icono.png">
+          <img alt="imagen de portada de GranaXplora" title="GranaXplora" src="images/icono.png">
         </a>
         <div class="text">
           <h1>GranaXplora</h1>
@@ -32,16 +31,13 @@
       </nav>
     </header>
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="portada.html">Inicio</a></li>
-        <li><a href="actividad_imprimir.html">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-    
-    <main>
-      <div class="content">
+    <ul class="sidebar">
+      <li><a href="portada.html">Inicio</a></li>
+      <li><a href="actividad_imprimir.html">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <main class="content">
         <div class="imgAct">
           <img alt="imagen de senderismo en Sierra Nevada" title="senderismo" src="images/senderismo1.png">
           <img alt="imagen de senderismo en Sierra Nevada " title="senderismo" src="images/senderismo2.png"> 
@@ -100,9 +96,10 @@
           <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
           <a href="https://twitter.com/home"><img src="images/xlogo.avif" alt="Twitter"></a>
           <a href="actividad_imprimir.html" onclick="window.print()"><img src="images/imprimir.png" alt="Imprimir"></a>
+          <!-- Cuando se clica en el botón de impresión, lleva a el archivo html de impresión, esto 
+            no realmente no sería necesario pues en el head de este archivo, mediante <link>, se especifican los archivos 
+            css de visualización y de impresión de forma que solo sería necesario un unico archivo html-->
         </nav>
-
-      </div>
     </main>
 
     <footer class="footer">
@@ -116,8 +113,5 @@
           <p><strong>Álvaro Lopez Vergara</strong></p>
       </div>
     </footer>
-
-
-
   </body>
 </html>

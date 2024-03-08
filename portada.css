@@ -16,47 +16,53 @@ body {
     grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
     grid-template-areas:
       "header"
-      "content"
       "sidebar"
+      "content"
       "footer";
   }
 
-  .sidebar {
-    display: none; /* Ocultar la barra lateral */
+  header .contenido{
+    font-size: 12px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav a {
+    font-size: 15px; /* Tamaño mínimo de fuente */
+  }
+
+  .sidebar li {
+    text-align: center;
   }
 }
 
 /* HEADER */
-.header {
+header {
   grid-area: header;
   background-color: rgb(100, 139, 64);
   color: rgb(255, 255, 255);
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: 2vw;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.616); 
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.863); 
   max-height: 20vw;
   overflow:  hidden;
-  line-height: 0.4;
-  
+  line-height: 0.4; /* Para ajustar la separacion entre el texto */
 }
 
-.header-content {
+header .contenido {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-content img {
+header .contenido img {
   margin-right: 30px;
   width: 20vw;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
 }
 
-.header-text {
+header .text {
   text-align: left;
-  
 }
 
 /* Menu */
@@ -73,13 +79,11 @@ header nav a {
   text-decoration: none; /* Eliminar el subrayado del texto */
   border-radius: 5px; /* Añadir esquinas redondeadas */
   background-color: rgb(100, 139, 64); /* Color de fondo */
-  
 }
 
 header nav a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
-
 
 /* SIDEBAR */
 .sidebar {
@@ -88,20 +92,17 @@ header nav a:hover {
   margin-left: 15px;
   grid-area: sidebar;
   border-radius: 5px;
-}
-
-.sidebar ul {
   list-style-type: none; 
   padding: 10px; 
 }
 
 .sidebar li {
-  margin-bottom: 10px; /* Separación entre elementos*/
+  margin-top: 10px; /* Separación del tope y entre elementos */
 }
 
 .sidebar a {
   display: block; 
-  padding: 8px; /* Espacio alrededor del texto del enlace */
+  padding: 8px; /* Espacio alrededor del texto */
   color: white;
   text-decoration: none; /* Eliminar el subrayado del texto */
   background-color: rgb(100, 139, 64); /* Color de fondo */
@@ -119,12 +120,13 @@ main {
 
 .content {
   display: grid;
+  grid-template-columns: repeat(3, minmax(20vw, 1fr)); /* Ancho dependiente del ancho de la ventana */
   grid-template-areas:
   "actividad actividad actividad";
-  grid-gap: 25px; /* Espacio entre las actividades */
+  grid-gap: 30px; /* Espacio entre las actividades */
 }
 
-.actividad {
+.content .actividad {
   border-radius: 10px; /* Esquinas redondeadas */
   text-align: center;
   text-decoration: none; /* Eliminar el subrayado del texto */
@@ -133,21 +135,21 @@ main {
   transition: transform 0.3s ease; /* Efecto de transición */
 }
 
-.actividad:hover {
-  transform: scale(1.07); /* Agrandar la actividad al pasar el mouse */
+.content .actividad:hover {
+  transform: scale(1.03); /* Agrandar la actividad al pasar el mouse */
 }
 
-.actividad img {
+.content .actividad img {
   border-top-left-radius: 10px; /* Esquinas redondeadas */
   border-top-right-radius: 10px; /* Esquinas redondeadas */
   width: 100%; /* La imagen se ajusta al ancho del contenedor */
-  height: 80%; 
+  height: 75%; 
 }
 
-.actividad h3 {
-  margin: 10px 0; /* Margen superior e inferior */
+.content .actividad h3 {
+  padding: 0px 15px;
+  font-size: 1.8vw;
 }
-
 
 /* Footer */
 footer {

@@ -62,7 +62,7 @@ header nav {
   grid-area: sidebar;
 }
 
-.sidebar ul {
+.sidebar li {
   display: none; /* Oculto en impresión */
 }
 
