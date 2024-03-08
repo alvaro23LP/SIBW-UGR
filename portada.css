@@ -22,11 +22,15 @@ body {
   }
 
   header .contenido{
-    font-size: 12px; /* Tamaño mínimo de fuente */
+    font-size: 11px; /* Tamaño mínimo de fuente */
   }
 
   header nav a {
-    font-size: 15px; /* Tamaño mínimo de fuente */
+    font-size: 14px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav {
+    margin-top: 0px;
   }
 
   .sidebar li {
