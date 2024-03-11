@@ -1,5 +1,5 @@
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   background-color: rgb(255, 255, 255);
   display: grid;
@@ -11,24 +11,13 @@ body {
    "footer footer footer"
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "content"
-      "footer";
-  }
-}
-
 /* HEADER */
 header {
   grid-area: header;
   color: rgb(0, 0, 0);
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: 2vw;
   max-height: 10vw;
   overflow:  hidden;
@@ -53,8 +42,6 @@ header .text {
 /* Menu header*/
 header nav {
   display: none; /* Oculto en impresión */
-  text-align: center; /* Centrar los enlaces */
-  margin-top: -20px;
 }
 
 /* SIDEBAR */
@@ -101,7 +88,7 @@ header nav {
 footer {
   grid-area: footer;
   color: rgb(0, 0, 0);
-  padding: 20px;
+  padding: 30px;
   text-align: left;
 }
 
