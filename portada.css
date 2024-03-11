@@ -1,7 +1,7 @@
-body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body { /* Ajustes generales para el contenido + definicion del grid */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255); /* Color de fondo */
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 0.5fr 3fr;
@@ -11,37 +11,10 @@ body {
    "footer footer footer"
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "content"
-      "footer";
-  }
-
-  header .contenido{
-    font-size: 11px; /* Tamaño mínimo de fuente */
-  }
-
-  header nav a {
-    font-size: 14px; /* Tamaño mínimo de fuente */
-  }
-
-  header nav {
-    margin-top: 50px;
-  }
-
-  .sidebar li {
-    text-align: center;
-  }
-}
 
 /* HEADER */
 header {
   grid-area: header;
-  background-color: rgb(100, 139, 64);
   color: rgb(255, 255, 255);
   padding-bottom: 30px;
   text-align: center;
@@ -49,8 +22,9 @@ header {
   font-size: 2vw;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.863); 
   max-height: 20vw;
-  overflow:  hidden;
+  overflow:  hidden;  /* Ocultar fuera del limite */
   line-height: 0.4; /* Para ajustar la separacion entre el texto */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
 }
 
 header .contenido {
@@ -69,7 +43,7 @@ header .text {
   text-align: left;
 }
 
-/* Menu */
+/* MENU */
 header nav {
   text-align: center; /* Centrar los enlaces */
   margin-top: -20px;
@@ -77,8 +51,8 @@ header nav {
 
 header nav a {
   display: inline-block; /* Convertir los enlaces en elementos de bloque en línea */
-  padding: 10px; /* Añadir espacio alrededor del texto */
-  margin: 0 10px; /* Añadir espacio entre los enlaces */
+  padding: 10px; /* Espacio alrededor del texto */
+  margin: 0 10px; /* Margen entre los enlaces */
   color: white; /* Color del texto */
   text-decoration: none; /* Eliminar el subrayado del texto */
   border-radius: 5px; /* Añadir esquinas redondeadas */
@@ -91,83 +65,127 @@ header nav a:hover {
 
 /* SIDEBAR */
 .sidebar {
-  background-color: #eeeeeec4;
-  margin-top: 10px;
-  margin-left: 15px;
   grid-area: sidebar;
-  border-radius: 5px;
-  list-style-type: none; 
-  padding: 10px; 
+  padding: 10px; /* Espacio alrededor */
+  margin-top: 1vw; /* Margenes */
+  margin-left: 20px;
+  border-radius: 5px; /* Esquinas redondeadas */
+  list-style-type: none; /* Lista sin puntos */
+  background-color: #eeeeeec4; /* Color de fondo */
 }
 
 .sidebar li {
-  margin-top: 10px; /* Separación del tope y entre elementos */
+  margin-top: 10px; /* Separación superior y entre elementos */
 }
 
 .sidebar a {
-  display: block; 
+  display: block; /* Convertir los enlaces en elementos de bloque */
   padding: 8px; /* Espacio alrededor del texto */
   color: white;
   text-decoration: none; /* Eliminar el subrayado del texto */
-  background-color: rgb(100, 139, 64); /* Color de fondo */
   border-radius: 5px; /* Añadir esquinas redondeadas */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
 }
 
 .sidebar a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
 
-/* Contenido Principal */
+/* MAIN CONTENT */
 main {
-  padding: 20px;
+  padding: 1.6vw;
 }
 
-.content {
+main {
   display: grid;
-  grid-template-columns: repeat(3, minmax(20vw, 1fr)); /* Ancho dependiente del ancho de la ventana */
   grid-template-areas:
   "actividad actividad actividad";
-  grid-gap: 30px; /* Espacio entre las actividades */
+  grid-gap: 3vw; /* Espacio entre las actividades */
 }
 
-.content .actividad {
+main .actividad {
   border-radius: 10px; /* Esquinas redondeadas */
   text-align: center;
   text-decoration: none; /* Eliminar el subrayado del texto */
-  color: #333;
-  background-color: #eeeeeec4; /* Color de fondo grisaceo */
+  color: #000000;
+  background-color: #eeeeeec4; /* Color de fondo */
   transition: transform 0.3s ease; /* Efecto de transición */
 }
 
-.content .actividad:hover {
+main .actividad:hover {
   transform: scale(1.03); /* Agrandar la actividad al pasar el mouse */
 }
 
-.content .actividad img {
+main .actividad img {
   border-top-left-radius: 10px; /* Esquinas redondeadas */
   border-top-right-radius: 10px; /* Esquinas redondeadas */
   width: 100%; /* La imagen se ajusta al ancho del contenedor */
-  height: 75%; 
+  height: 75%; /* Y a un 75 de la altura */
 }
 
-.content .actividad h3 {
-  padding: 0px 15px;
+main .actividad h3 {
   font-size: 1.8vw;
+  margin-top: 1vw; /* Margen superior */
+  padding: 0px 15px; /* Espacios laterales */
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   grid-area: footer;
-  background-color: #333;
+  background-color: #333; /* Color de fondo */
   color: white;
-  padding: 20px;
+  padding: 20px; /* Espacio superior */
   text-align: center;
 }
 
 .contact-info p {
-  margin: 5px 0;
+  margin: 5px 0; /* Margen superior */
 }
 
 .contact-info strong {
-  font-weight: bold;
+  font-weight: bold; /* Destacar en negrita */
+}
+
+
+/* PARA VENTANAS PEQUEÑAS */
+@media only screen and (max-width: 600px) { /* Diferentes ajustes para un ancho de ventana inferior a los 600px */
+  body {
+    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content" 
+      "footer";
+  }
+
+  header .contenido{
+    font-size: 11px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav a {
+    font-size: 14px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav {
+    padding-top: 10px;
+  }
+
+  .sidebar {
+    margin-top: 0px; 
+    margin-left: 0px;
+  }
+
+  .sidebar li {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) { /* Diferentes ajustes para un ancho de ventana inferior a los 550px (telefonos)*/
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    display: none;
+  }
 }
