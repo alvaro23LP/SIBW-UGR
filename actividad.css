@@ -11,171 +11,191 @@ body {
    "footer footer footer"
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
-  }
-
-  .sidebar {
-    display: none; /* Ocultar la barra lateral */
-  }
-}
-
 /* HEADER */
 header {
   grid-area: header;
-  background-color: rgb(100, 139, 64);
   color: rgb(255, 255, 255);
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Anta", sans-serif;
   font-size: 2vw;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.616); 
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.863); 
   max-height: 20vw;
-  overflow:  hidden;
-  line-height: 0.4;
+  overflow:  hidden;  /* Ocultar fuera del limite */
+  line-height: 0.4; /* Para ajustar la separacion entre el texto */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
 }
 
-.header-content {
+header .contenido {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-content img {
+header .contenido img {
   margin-right: 30px;
   width: 20vw;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
-
 }
 
-.header-text {
+header .text {
   text-align: left;
 }
 
-
-
-/* Menu */
-nav {
+/* MENU */
+header nav {
   text-align: center; /* Centrar los enlaces */
   margin-top: -20px;
 }
 
-nav a {
+header nav a {
   display: inline-block; /* Convertir los enlaces en elementos de bloque en línea */
-  padding: 10px; /* Añadir espacio alrededor del texto */
-  margin: 0 10px; /* Añadir espacio entre los enlaces */
+  padding: 10px; /* Espacio alrededor del texto */
+  margin: 0 10px; /* Margen entre los enlaces */
   color: white; /* Color del texto */
   text-decoration: none; /* Eliminar el subrayado del texto */
   border-radius: 5px; /* Añadir esquinas redondeadas */
   background-color: rgb(100, 139, 64); /* Color de fondo */
-  
 }
 
-nav a:hover {
+header nav a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
 
-
 /* SIDEBAR */
 .sidebar {
-  margin-left: 15px;
   grid-area: sidebar;
-  border-radius: 5px;
-  background-color: #eeeeeec4;
-}
-
-.sidebar ul {
-  list-style-type: none; 
-  padding: 10px; 
+  padding: 10px; /* Espacio alrededor */
+  margin-top: 1vw; /* Margenes */
+  margin-left: 20px;
+  border-radius: 5px; /* Esquinas redondeadas */
+  list-style-type: none; /* Lista sin puntos */
+  background-color: #eeeeeec4; /* Color de fondo */
 }
 
 .sidebar li {
-  margin-bottom: 10px; 
+  margin-top: 10px; /* Separación superior y entre elementos */
 }
 
 .sidebar a {
-  display: block; 
-  padding: 8px; /* Espacio alrededor del texto del enlace */
+  display: block; /* Convertir los enlaces en elementos de bloque */
+  padding: 8px; /* Espacio alrededor del texto */
   color: white;
   text-decoration: none; /* Eliminar el subrayado del texto */
-  background-color: rgb(100, 139, 64); /* Color de fondo */
   border-radius: 5px; /* Añadir esquinas redondeadas */
+  background-color: rgb(100, 139, 64); /* Color de fondo */
 }
 
 .sidebar a:hover {
   background-color: rgb(80, 119, 44); /* Cambiar el color de fondo al pasar el mouse */
 }
 
-
-/* Contenido Principal */
-
-.content {
+/* MAIN CONTENT */
+main {
+  background-color: #eeeeeec4;
+  border-radius: 5px;
+  padding: 20px;
   grid-area: content;
-  display: grid;
-  margin: 0px 20px;
-  grid-gap: 0px;
-  grid-template-areas:
-   "texto texto imgAct"
-   "texto texto imgAct"
-   "redes redes redes"
+  margin: 18px 10px;
+  font-size:  large;
 }
 
-.content img {
-  float: right;
+main img {
   max-width: 20vw;
   border-radius: 5px;
   border-color: #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.562);
-  margin: 10px;
+  margin: 2vw;
 }
 
-.texto {
+main .texto {
   grid-area: texto;
 }
 
-.imgAct {
-  grid-area: imgAct;
+main .imgAct {
+  float: right;
   display: flex;
   flex-direction: column; 
 }
 
-
-.redes {
+main .redes {
   display: flex;
   justify-content: space-around;
-  align-items: center; 
-  grid-area: redes;
-  
+  align-items: center;   
 }
 
-.redes img {
+main .redes img {
   max-width: 2em;
   margin: 5 10px;
 }
 
-.redes img:hover {
-  transform: scale(1.1); /* Agrandar la actividad al pasar el mouse */
+main .redes img:hover {
+  transform: scale(1.2); /* Agrandar la actividad al pasar el mouse */
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   grid-area: footer;
-  background-color: #333;
+  background-color: #333; /* Color de fondo */
   color: white;
-  padding: 20px;
+  padding: 20px; /* Espacio superior */
   text-align: center;
 }
 
 .contact-info p {
-  margin: 5px 0;
+  margin: 5px 0; /* Margen superior */
 }
 
 .contact-info strong {
-  font-weight: bold;
+  font-weight: bold; /* Destacar en negrita */
+}
+
+
+/* PARA VENTANAS PEQUEÑAS */
+@media only screen and (max-width: 600px) { /* Diferentes ajustes para un ancho de ventana inferior a los 600px */
+  body {
+    grid-template-columns: 1fr; /* Solo una columna en la cuadrícula */
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content" 
+      "footer";
+  }
+
+  header .contenido{
+    font-size: 11px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav a {
+    font-size: 14px; /* Tamaño mínimo de fuente */
+  }
+
+  header nav {
+    padding-top: 10px;
+  }
+
+  .sidebar {
+    margin-top: 0px; 
+    margin-left: 0px;
+  }
+
+  .sidebar li {
+    text-align: center;
+  }
+
+  main {
+    padding: 0px 15px;
+    margin: 0px 10px;
+  }
+  
+}
+
+@media only screen and (max-width: 550px) { /* Diferentes ajustes para un ancho de ventana inferior a los 550px (telefonos)*/
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    display: none;
+  }
 }
