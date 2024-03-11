@@ -3,27 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#09f">
-    
+    <meta name="theme-color" content="#425c29">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Madimi+One&display=swap" rel="stylesheet">
     <title>GranaXplora</title>
-    
-    <link rel="icon" type="image/jpg" href="images/icono.jpg">
-    <link rel="stylesheet" href="portada.css" type="text/css">
+    <link rel="icon" type="image/jpg" href="images/icono.png">
+    <link rel="stylesheet" href="actividad.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="actividad_imprimir.css" media="print"  type="text/css"> <!-- CSS para impresión -->
   </head>
   
-  <body class="wrapper">
-    
-    
-    <header class="header">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-      <div class="header-content">
+  <body>
+    <header class="header"> 
+      <div class="contenido">
         <a href="portada.html"> 
-          <img   id="imagenPort" alt="imagen de portada" 
-            title="icono de GranaXplora" 
-            src="images/icono.png">
+          <img alt="imagen de portada de GranaXplora" title="GranaXplora" src="images/icono.png">
         </a>
-        <div class="header-text">
+        <div class="text">
           <h1>GranaXplora</h1>
           <h2>Actividades de montaña en Granada</h2>
         </div>
@@ -33,22 +27,77 @@
         <a href="">Menu 2</a>
         <a href="">Menu 3</a>
       </nav>
-
     </header>
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="portada.html">Inicio</a></li>
-        <li><a href="actividad.html">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-    
-    
+    <ul class="sidebar">
+      <li><a href="portada.html">Inicio</a></li>
+      <li><a href="actividad_imprimir.html">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
     <main class="content">
-      <!-- contenido + grid2-->
-      
+        <div class="imgAct">
+          <img alt="imagen de senderismo en Sierra Nevada" title="senderismo" src="images/senderismo1.png">
+          <img alt="imagen de senderismo en Sierra Nevada " title="senderismo" src="images/senderismo2.png"> 
+        </div>
+        <div class="texto"> 
+          <h2>Senderismo en Sierra Nevada 2024</h2>
+          <p>Detalles: </p>
+            <ul>
+              <li>Fecha: 12 de marzo de 2024</li> 
+              <li>Precio: 25€ por persona</li>
+              <li>Dificultad: Media</li>
+              <li>Distancia: 10 km</li>
+              <li>Duración: 5 horas</li>
+            </ul>
+          <p>Descripción de la actividad:</p>
+          <p>Sumérgete en la maravilla natural de Sierra Nevada a través de una inolvidable 
+            jornada de senderismo. Este viaje te llevará por algunos de los paisajes más 
+            impresionantes que ofrece la montaña más alta de la península ibérica. Desde 
+            valles cubiertos de exuberante vegetación hasta picos majestuosos que se elevan 
+            hacia el cielo, cada paso que des te llevará más cerca de la belleza indomable 
+            de la naturaleza.
+          </p>
+
+          <p>Comenzando desde el encantador pueblo de montaña, nuestro recorrido nos llevará 
+            a través de antiguos senderos que serpentean entre bosques de pinos y robles 
+            centenarios. A medida que ascendemos, seremos recibidos por vistas panorámicas 
+            que quitan el aliento, con vistas a las imponentes cumbres nevadas que se elevan 
+            en el horizonte.
+          </p>
+            
+          <p>Nuestro guía experto nos llevará a lugares de interés histórico y natural a lo 
+            largo del camino. Podremos descubrir antiguas ruinas moriscas, cuevas ocultas 
+            que cuentan historias de tiempos pasados, y manantiales cristalinos que brotan 
+            de las entrañas de la montaña. Cada rincón de Sierra Nevada está impregnado de 
+            historia y misterio, y cada paso nos acerca más a su corazón salvaje y prístino.
+          </p>
+
+          <p>Material necesario:</p>
+          <p>Para disfrutar plenamente de esta experiencia, es importante estar preparado. 
+            Aquí tienes una lista de material necesario que te recomendamos llevar contigo:</p>
+          <ul>
+            <li>Botas de senderismo</li> 
+            <li>Agua y comida</li>
+            <li>Gorra y protector solar</li>
+            <li>Mochila</li>
+          </ul>
+          
+          <p>Reserva tu plaza: </p>
+          <p>¿Listo para embarcarte en esta aventura? ¡Reserva tu plaza ahora mismo y únete a 
+            nosotros en este emocionante viaje a través de la majestuosidad de Sierra Nevada! 
+            Para más información y reservas, contáctanos a través del correo electrónico 
+            info@senderismosierranevada.com o llámanos al +34 123 456 789.</p>
+        </div>
+        
+        <nav class="redes"> 
+          <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://twitter.com"><img src="images/xlogo.avif" alt="Twitter"></a>
+          <a href="actividad_imprimir.html" onclick="window.print()"><img src="images/imprimir.png" alt="Imprimir"></a>
+          <!-- Cuando se clica en el botón de impresión, lleva a el archivo html de impresión, esto 
+            no realmente no sería necesario pues en el head de este archivo, mediante <link>, se especifican los archivos 
+            css de visualización y de impresión de forma que solo sería necesario un unico archivo html-->
+        </nav>
     </main>
 
     <footer class="footer">
@@ -62,8 +111,5 @@
           <p><strong>Álvaro Lopez Vergara</strong></p>
       </div>
     </footer>
-
-
-
   </body>
 </html>
