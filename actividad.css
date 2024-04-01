@@ -92,6 +92,7 @@ header nav a:hover {
 
 /* MAIN CONTENT */
 main {
+  position: relative; 
   background-color: #eeeeeec4;
   border-radius: 5px;
   padding: 20px;
@@ -140,6 +141,7 @@ footer {
   color: white;
   padding: 20px; /* Espacio superior */
   text-align: center;
+  z-index: 0; 
 }
 
 .contact-info p {
@@ -198,4 +200,154 @@ footer {
   header h2 {
     display: none;
   }
+}
+
+/**********************************************************************************/
+/* Estilo general para el desplegable */
+.comentarios {
+  position: fixed;
+  top: 0;
+  right: -350px; /* Oculto por defecto */
+  bottom: 0;
+  width: 350px;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  border-left: 2px solid #000000;
+  z-index: 9999; 
+
+}
+
+/* Estilo para el botón del desplegable de comentarios */
+#btnComentarios {
+  position: fixed; /* Ajustado a "fixed" para que esté en la ventana visible */
+  top: 5px;
+  right: 0px; /* Ajustado a una posición visible */
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/comentarios.png'); /* Ruta de la imagen */
+  background-size: contain; /* Contiene la imagen dentro del botón */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen dentro del botón */
+  background-size: calc(100% - 5px); 
+  background-color: #caad2b;
+
+  border-color: #000000; /* Cambiando el color del borde a negro */
+  border-style: solid; /* Agregando el estilo de borde */
+  border-width: 2px; /* Definiendo el ancho del borde */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: right 0.3s ease;
+}
+
+#btnComentarios:hover {
+  background-color: #ac9843;
+}
+
+
+
+/* Estilo para el panel de comentarios y su contenido*/
+#panelComentarios {
+  padding: 0px 20px;
+}
+
+#panelComentarios h2 {
+  font-size: 30px; /* Tamaño de fuente del título */
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #caad2b;
+  text-shadow: 2px 2px 4px #000000;
+  border-radius: 5px;
+  color: #ffffff; /* Color del texto del título */
+}
+
+/* Estilos para los artículos dentro del panel de comentarios */
+#panelComentarios article {
+  margin-bottom: 10px; /* Espacio entre artículos */
+  padding: 0px 10px;
+  border-radius: 5px;
+  background-color: #eeeeee; /* Cambia el color de fondo */
+  border: 2px solid #ac9943; /* Borde inferior entre artículos */
+}
+
+/* Estilos específicos para el contenido de los artículos */
+#panelComentarios article h3 {
+  font-size: 18px; /* Tamaño de fuente del título */
+  text-decoration: underline;
+  color: #333; /* Color del texto del título */
+}
+
+#panelComentarios article p {
+  font-size: 15px; /* Tamaño de fuente del párrafo */
+  color: #000000; /* Color del texto del párrafo */
+}
+
+/* Aplica el efecto de desenfoque al eresto de la página*/
+.blur {
+  filter: blur(2px);
+}
+
+
+/* Estilo para el botón de añadir comentario */
+#btnAniadir {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #333;
+  background-color: #caad2b;
+  color: #ffffff;
+  border-color: #000000; /* Cambiando el color del borde a negro */
+  border-style: solid; /* Agregando el estilo de borde */
+  border-width: 2px; /* Definiendo el ancho del borde */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 50px;
+}
+
+#btnAniadir:hover {
+  background-color: #ac9843;
+}
+
+/* Estilo para el formulario */
+#formComentario {
+  display: none;
+  border: 2px solid #979797; 
+  padding: 10px;
+  margin-bottom: 80px;
+  border-radius: 5PX;
+  background-color: #fdf5d0;
+}
+
+#formComentario *:not(input[type="submit"]):not(input[type="button"])  {
+  margin-bottom: 10px;
+  width: 95%;
+  min-height: 20px;
+}
+
+#formComentario textarea {
+  field-sizing: content;  
+}
+
+#formComentario #btnEnviarForm,
+#formComentario #btnCancelarForm {
+  margin: 10px auto; 
+  display: block; 
+  color: white; 
+  border-radius: 4px;
+  width: 50%;
+  padding: 5px 10px; 
+  font-size: medium;
+  cursor: pointer; 
+}
+
+#formComentario #btnEnviarForm {
+  background-color: #4CAF50; 
+}
+
+#formComentario #btnCancelarForm {
+  background-color: #f44336; 
 }
